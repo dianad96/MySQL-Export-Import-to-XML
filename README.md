@@ -1,4 +1,6 @@
 ## How to
+- change the `sn/database.php` and `XML/exportTo.php` to your credentials
+- first create your database by running the `sql/resetTables.php` script
 - `exportTo.php` To export the database to XML format run `/exportTo.php`. If successfully imported, check your XML folder for the backup file.
 - `importTo.php` To import the XML file first change the path to point to your file `$path = 'mydb-backup-1486313758.xml';` and then run the script in your browser
 
