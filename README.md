@@ -87,3 +87,28 @@ GROUP
 UNIQUE
 ```
 (credits to [Mchl](http://stackoverflow.com/questions/11437650/what-do-bit-flags-in-mysqli-mean-using-fetch-field-direct))
+
+## How does importTo.php works? (dealing with constraint issues)
+Ideally, before creating tables with constrains, the user should specify the order in which the tables should be created so that we can prevent future constraint conflicts. But what happens if we want to import different databases? Should we manually add the array of ordered tables? We're too lazy to do that each time.
+For the database we're using in this project, we have the following column constraints:
+
+| Table Name             | Tables it references   |
+| ---------------------- |:-------------|
+| accessRights           | photoCollection/users/circleOfFriends |
+| annotations            | photos/users |
+| blogs                  | users |
+| circlOfFriends         |  |
+| comments               | photos/users |
+| friendships            |  |
+| messages               |  |
+| photoCollection        |  |
+| photos                 | photoCollection |
+| posts                  | blogs |
+| privacySettings        | users |
+| rights                 | roles |
+| roles                  |  |
+| userCircleRelationship | users/circleOfFriends |
+| users                  | roles |
+
+The first elements added to the array of ordered tables are the ones that do not reference any tables (messages/roles etc). The algorithm will then search for tables that reference other tables already in the ordered array (since it means we can create those tables) and adds them to the ordered array. It will stop when all the tables are in the ordered array.
+
