@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="mydb">
+	<table name="accessrights">
+		<columns>
+			<column name="accessRightsId" orgname="accessRightsId" max_length="0" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="photoCollectionId" orgname="photoCollectionId" max_length="0" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="photocollection" referenced_column_name="photoCollectionId" />
+			<column name="email" orgname="email" max_length="0" length="50" charsetnr="8" flags="20489" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="MUL" referenced_table_name="users" referenced_column_name="email" />
+			<column name="circleFriendsId" orgname="circleFriendsId" max_length="0" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="circleoffriends" referenced_column_name="circleFriendsId" />
+		</columns>
+		<records>
+		</records>
+	</table>
+	<table name="annotations">
+		<columns>
+			<column name="annotationsId" orgname="annotationsId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="photoId" orgname="photoId" max_length="1" length="11" charsetnr="63" flags="49160" type="3" decimals="0" is_nullable="YES" column_type="int(11)" column_key="MUL" referenced_table_name="photos" referenced_column_name="photoId" />
+			<column name="email" orgname="email" max_length="17" length="50" charsetnr="8" flags="20489" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="MUL" referenced_table_name="users" referenced_column_name="email" />
+			<column name="coordinateX" orgname="coordinateX" max_length="2" length="11" charsetnr="63" flags="32768" type="3" decimals="0" is_nullable="YES" column_type="int(11)" />
+			<column name="coordinateY" orgname="coordinateY" max_length="2" length="11" charsetnr="63" flags="32768" type="3" decimals="0" is_nullable="YES" column_type="int(11)" />
+			<column name="annotationText" orgname="annotationText" max_length="12" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+		</columns>
+		<records>
+			<record>
+				<annotationsId>1</annotationsId>
+				<photoId>1</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<coordinateX>10</coordinateX>
+				<coordinateY>11</coordinateY>
+				<annotationText>Annotations!</annotationText>
+			</record>
+			<record>
+				<annotationsId>2</annotationsId>
+				<photoId>2</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<coordinateX>20</coordinateX>
+				<coordinateY>30</coordinateY>
+				<annotationText>Annotations!</annotationText>
+			</record>
+			<record>
+				<annotationsId>3</annotationsId>
+				<photoId>3</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<coordinateX>40</coordinateX>
+				<coordinateY>40</coordinateY>
+				<annotationText>Annotations!</annotationText>
+			</record>
+			<record>
+				<annotationsId>4</annotationsId>
+				<photoId>4</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<coordinateX>20</coordinateX>
+				<coordinateY>10</coordinateY>
+				<annotationText>Annotations!</annotationText>
+			</record>
+			<record>
+				<annotationsId>5</annotationsId>
+				<photoId>5</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<coordinateX>11</coordinateX>
+				<coordinateY>1</coordinateY>
+				<annotationText>Annotations!</annotationText>
+			</record>
+		</records>
+	</table>
+	<table name="blogs">
+		<columns>
+			<column name="blogId" orgname="blogId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="email" orgname="email" max_length="17" length="50" charsetnr="8" flags="20489" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="MUL" referenced_table_name="users" referenced_column_name="email" />
+			<column name="blogTitle" orgname="blogTitle" max_length="38" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="blogDescription" orgname="blogDescription" max_length="76" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+		</columns>
+		<records>
+			<record>
+				<blogId>1</blogId>
+				<email>charles@ucl.ac.uk</email>
+				<blogTitle>Passeges from the Life of a Philosophe</blogTitle>
+				<blogDescription>Perhaps it would be better for science, that all criticism should be avowed.</blogDescription>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<blogId>2</blogId>
+				<email>larry@ucl.ac.uk</email>
+				<blogTitle>Changing the world</blogTitle>
+				<blogDescription>You never lose a dream. It just incubates as a hobby.</blogDescription>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<blogId>3</blogId>
+				<email>ken@ucl.ac.uk</email>
+				<blogTitle>Belle</blogTitle>
+				<blogDescription>If you want to go somewhere, goto is the best way to get there.</blogDescription>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+		</records>
+	</table>
+	<table name="circleoffriends">
+		<columns>
+			<column name="circleFriendsId" orgname="circleFriendsId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="circleOfFriendsName" orgname="circleOfFriendsName" max_length="16" length="50" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(50)" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+		</columns>
+		<records>
+			<record>
+				<circleFriendsId>1</circleFriendsId>
+				<circleOfFriendsName>lmao</circleOfFriendsName>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<circleFriendsId>2</circleFriendsId>
+				<circleOfFriendsName>lol</circleOfFriendsName>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<circleFriendsId>3</circleFriendsId>
+				<circleOfFriendsName>The CS Friends</circleOfFriendsName>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<circleFriendsId>4</circleFriendsId>
+				<circleOfFriendsName>The Science Club</circleOfFriendsName>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+		</records>
+	</table>
+	<table name="comments">
+		<columns>
+			<column name="commentId" orgname="commentId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="photoId" orgname="photoId" max_length="1" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="photos" referenced_column_name="photoId" />
+			<column name="email" orgname="email" max_length="17" length="50" charsetnr="8" flags="16392" type="253" decimals="0" is_nullable="YES" column_type="varchar(50)" column_key="MUL" referenced_table_name="users" referenced_column_name="email" />
+			<column name="commentText" orgname="commentText" max_length="123" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+		</columns>
+		<records>
+			<record>
+				<commentId>1</commentId>
+				<photoId>1</photoId>
+				<email>ada@ucl.ac.uk</email>
+				<commentText>Which conference was this one?</commentText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<commentId>2</commentId>
+				<photoId>1</photoId>
+				<email>ken@ucl.ac.uk</email>
+				<commentText>This is a good photo!</commentText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<commentId>3</commentId>
+				<photoId>1</photoId>
+				<email>larry@ucl.ac.uk</email>
+				<commentText>I think the light in this picture isn't that good. Could have been better! And why didn't you invite me to this conference?</commentText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<commentId>4</commentId>
+				<photoId>2</photoId>
+				<email>ken@ucl.ac.uk</email>
+				<commentText>This reminded me...Have you seen where the annual conference is going to take place this year?</commentText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<commentId>5</commentId>
+				<photoId>2</photoId>
+				<email>charles@ucl.ac.uk</email>
+				<commentText>Yes, I have. Have you seen who the guest speakers are?</commentText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+		</records>
+	</table>
+	<table name="friendships">
+		<columns>
+			<column name="friendshipID" orgname="friendshipID" max_length="2" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="emailFrom" orgname="emailFrom" max_length="17" length="50" charsetnr="8" flags="4097" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" />
+			<column name="emailTo" orgname="emailTo" max_length="17" length="50" charsetnr="8" flags="4097" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" />
+			<column name="status" orgname="status" max_length="8" length="20" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(20)" />
+		</columns>
+		<records>
+			<record>
+				<friendshipID>1</friendshipID>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<emailTo>larry@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>2</friendshipID>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<emailTo>ken@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>3</friendshipID>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<emailTo>ada@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>4</friendshipID>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<emailTo>alan@ucl.ac.uk</emailTo>
+				<status>pending</status>
+			</record>
+			<record>
+				<friendshipID>5</friendshipID>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<emailTo>john@ucl.ac.uk</emailTo>
+				<status>denied</status>
+			</record>
+			<record>
+				<friendshipID>6</friendshipID>
+				<emailFrom>vicky@ucl.ac.uk</emailFrom>
+				<emailTo>charles@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>7</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>ada@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>8</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>alan@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>9</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>john@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>10</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>tim@ucl.ac.uk</emailTo>
+				<status>pending</status>
+			</record>
+			<record>
+				<friendshipID>11</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>denis@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+			<record>
+				<friendshipID>12</friendshipID>
+				<emailFrom>grace@ucl.ac.uk</emailFrom>
+				<emailTo>ken@ucl.ac.uk</emailTo>
+				<status>accepted</status>
+			</record>
+		</records>
+	</table>
+	<table name="messages">
+		<columns>
+			<column name="messageId" orgname="messageId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="emailTo" orgname="emailTo" max_length="17" length="50" charsetnr="8" flags="4097" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" />
+			<column name="emailFrom" orgname="emailFrom" max_length="17" length="50" charsetnr="8" flags="4097" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" />
+			<column name="messageText" orgname="messageText" max_length="71" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+		</columns>
+		<records>
+			<record>
+				<messageId>1</messageId>
+				<emailTo>ada@ucl.ac.uk</emailTo>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<messageText>Dear Ada, How are you? Haven't seen you in a while</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+			<record>
+				<messageId>2</messageId>
+				<emailTo>charles@ucl.ac.uk</emailTo>
+				<emailFrom>ada@ucl.ac.uk</emailFrom>
+				<messageText>Hello, Charles. We haven't talked for quite a while. How have you been?</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+			<record>
+				<messageId>3</messageId>
+				<emailTo>ada@ucl.ac.uk</emailTo>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<messageText>I wanted to ask you if you have seen the last paper I published?</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+			<record>
+				<messageId>4</messageId>
+				<emailTo>charles@ucl.ac.uk</emailTo>
+				<emailFrom>ada@ucl.ac.uk</emailFrom>
+				<messageText>I don't think so. What is it about and where did you publish it?</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+			<record>
+				<messageId>5</messageId>
+				<emailTo>3</emailTo>
+				<emailFrom>charles@ucl.ac.uk</emailFrom>
+				<messageText>Hello World</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+			<record>
+				<messageId>6</messageId>
+				<emailTo>4</emailTo>
+				<emailFrom>ada@ucl.ac.uk</emailFrom>
+				<messageText>Invitation</messageText>
+				<dateCreated>2017-02-05 11:15:20</dateCreated>
+			</record>
+		</records>
+	</table>
+	<table name="photocollection">
+		<columns>
+			<column name="photoCollectionId" orgname="photoCollectionId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+			<column name="title" orgname="title" max_length="17" length="100" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(100)" />
+			<column name="description" orgname="description" max_length="0" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="createdBy" orgname="createdBy" max_length="17" length="255" charsetnr="8" flags="4097" type="253" decimals="0" is_nullable="NO" column_type="varchar(255)" />
+		</columns>
+		<records>
+			<record>
+				<photoCollectionId>1</photoCollectionId>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+				<title>Conferences</title>
+				<description></description>
+				<createdBy>charles@ucl.ac.uk</createdBy>
+			</record>
+			<record>
+				<photoCollectionId>2</photoCollectionId>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+				<title>Difference Engine</title>
+				<description></description>
+				<createdBy>charles@ucl.ac.uk</createdBy>
+			</record>
+		</records>
+	</table>
+	<table name="photos">
+		<columns>
+			<column name="photoId" orgname="photoId" max_length="2" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="photoCollectionId" orgname="photoCollectionId" max_length="1" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="photocollection" referenced_column_name="photoCollectionId" />
+			<column name="dateAdded" orgname="dateAdded" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+			<column name="imageReference" orgname="imageReference" max_length="30" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+		</columns>
+		<records>
+			<record>
+				<photoId>1</photoId>
+				<photoCollectionId>1</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/12.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>2</photoId>
+				<photoCollectionId>1</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/13.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>3</photoId>
+				<photoCollectionId>1</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/14.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>4</photoId>
+				<photoCollectionId>1</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/15.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>5</photoId>
+				<photoCollectionId>1</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/16.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>6</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/17.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>7</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/18.png</imageReference>
+			</record>
+			<record>
+				<photoId>8</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/19.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>9</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/20.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>10</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/21.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>11</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/22.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>12</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/23.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>13</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/24.jpg</imageReference>
+			</record>
+			<record>
+				<photoId>14</photoId>
+				<photoCollectionId>2</photoCollectionId>
+				<dateAdded>2017-02-05 11:15:19</dateAdded>
+				<imageReference>/images/photoCollection/25.jpg</imageReference>
+			</record>
+		</records>
+	</table>
+	<table name="posts">
+		<columns>
+			<column name="postId" orgname="postId" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="blogId" orgname="blogId" max_length="1" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="blogs" referenced_column_name="blogId" />
+			<column name="postTitle" orgname="postTitle" max_length="12" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="postText" orgname="postText" max_length="7974" length="-1" charsetnr="8" flags="16" type="252" decimals="0" is_nullable="YES" column_type="longtext" />
+			<column name="dateCreated" orgname="dateCreated" max_length="19" length="19" charsetnr="63" flags="1152" type="7" decimals="0" is_nullable="YES" column_type="timestamp" />
+		</columns>
+		<records>
+			<record>
+				<postId>1</postId>
+				<blogId>1</blogId>
+				<postTitle>Preface</postTitle>
+				<postText>Some men write their lives to save themselves from ennui, careless of the amount they inflict on their readers.
+Others write their personal history, lest some kind friend should survive them, and, in showing off his own talent, unwittingly show them up.
+Others, again, write their own life from a different motive—from fear that the vampires of literature might make it their prey.
+I have frequently had applications to write my life, both from my countrymen and from foreigners. Some caterers for the public offered to pay me for it. Others required that I should pay them for its insertion; others offered to insert it without charge. One proposed to give me a quarter of a column gratis, and as many additional lines of eloge as I chose to write and pay for at ten-pence per line. To many of these I sent a list of my works, with the remark that they formed the best life of an author; but nobody cared to insert them.
+I have no desire to write my own biography, as long as I have strength and means to do better work.
+The remarkable circumstances attending those Calculating Machines, on which I have spent so large a portion of my life, make me wish to place on record some account of their past history. As, however, such a work would be utterly uninteresting to the greater part of my countrymen, I thought it might be rendered less unpalatable by relating some of my experience amongst various classes of society, widely differing from each other, in which I have occasionally mixed.
+This volume does not aspire to the name of an autobiography. It relates a variety of isolated circumstances in which I have taken part—some of them arranged in the order of time, and others grouped together in separate chapters, from similarity of subject.
+The selection has been made in some cases from the importance of the matter. In others, from the celebrity of the persons concerned ; whilst several of them furnish interesting illustrations of human character.</postText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+			<record>
+				<postId>2</postId>
+				<blogId>1</blogId>
+				<postTitle>My Ancestors</postTitle>
+				<postText>What is there in a name? It is merely an empty basket, until you put something into it. My earliest visit to the Continent taught me the value of such a basket, filled with the name of my venerable friend the first Herschel, ere yet my younger friend his son, had adorned his distinguished patronymic with the additional laurels of his own well-earned fame.
+The inheritance of a celebrated name is not, however, without its disadvantages. This truth I never found more fully appreciated, nor more admirably expressed, than in a conversation with the son of Filangieri, the author of the celebrated Treatise on Legislation, with whom I became acquainted at Naples, and in whose company I visited several of the most interesting institutions of that capital.
+In the course of one of our drives, I alluded to the advantages of inheriting a distinguished name, as in the case of the second Herschel. His remark was, &quot;For my own part,I think it a great disadvantage. Such a man must feel in the position of one inheriting a vast estate, so deeply mortgaged that he can never hope, by any efforts of his own, to redeem it.&quot;
+Without reverting to the philosophic, but unromantic, views of our origin taken by Darwin, I shall pass over the long history of our progress from a monad up to man, and commence tracing my ancestry as the world generally do: namely, as soon as there is the slightest ground for conjecture. Although I have contended for the Mosaic date of the creation of man as long as I decently could, and have even endeavoured to explain away [1] some of the facts relied upon to prove man's long anterior origin; yet I must admit that the continual accumulation of evidence probably will, at last, compel me to acknowledge that, in this single instance, the writings of Moses may have been misapprehended.
+Let us, therefore, take for granted that man and certain extinct races of animals lived together, thousands of years before Adam. We find, at that period, a race who formed knives, and hammers, and arrow-heads out of flint. Now, considering my own inveterate habit of contriving tools, it is more probable that I should derive my passion by hereditary transmission from these original tool-makers, than from any other inferior race existing at that period.
+Many years ago I met a very agreeable party at Mr. Rogers' table. Somebody introduced the subject of ancestry. I remarked that most people are reluctant to acknowledge as their father or grandfather, any person who had committed a dishonest action or a crime. But that no one ever scrupled to be proud of a remote ancestor, even though he might have been a thief or a murderer. Various remarks were made, and reasons assigned, for this tendency of the educated mind. I then turned to my next neighbour, Sir Robert H. Inglis, and asked him what he would do, supposing he possessed undoubted documents, that he was lineally descended from Cain.
+Sir Robert said he was at that moment proposing to himself the very same question. After some consideration, he said he should burn them; and then inquired what I should do in the same circumstances. My reply was, that I should preserve them: but simply because I thought the preservation of any fact might ultimately be useful.
+I possess no evidence that I am descended from Cain. If any herald suppose that there may be such a presumption, I think it must arise from his confounding Cain with Tubal Cain, who was a great worker in iron. Still, however he might argue that, the probabilities are in favour of his opinion: for I, too, work in iron. But a friend of mine, to whose kind criticisms I am much indebted, suggests that as Tubal Cain invented the Organ, this probability is opposed to the former one.
+The next step in my pedigree is to determine whence the origin of my modern family name.
+Some have supposed it to be derived from the cry of sheep. If so, that would point to a descent from the Shepherd Kings. Others have supposed it is derived from the name of a place called Bab or Babb, as we have, in the West of England, Bab Tor, Babbacombe, &amp;c. But this is evidently erroneous; for, when a people took possession of a desert country, its various localities could possess no names; consequently, the colonists could not take names from the country to which they migrated, but would very naturally give their own names to the several lands they appropriated: &quot;mais revenons à nos moutons.&quot;
+How my blood was transmitted to me through more modern races, is quite immaterial, seeing the admitted antiquity of the flint-workers.
+In recent times, that is, since the Conquest, my knowledge of the history of my family is limited by the unfortunate omission of my name from the roll of William's followers. Those who are curious about the subject, and are idlers, may, if they think it worth while, search all the parish registers in the West of England and elsewhere.
+The light I can throw upon it is not great, and rests on a few documents, and on family tradition. During the past four generations I have no surviving collateral relatives of my own name.
+The name of Babbage is not uncommon in the West of England. One day during my boyhood, I observed it over a small grocer's shop, whilst riding through the town of Chudley. I dismounted, went into the shop, purchased some figs, and found a very old man of whom I made inquiry as to his family. He had not a good memory himself, but his wife told me that his name was Babb when she married him, and that it was only, during the last twenty years he had adopted the name of Babbage, which, the old man thought, sounded better. Of course I told his wife that I entirely agreed with her husband, and thought him a very sensible fellow.
+The craft most frequently practised by my ancestors seems to have been that of a goldsmith, although several are believed to have practised less dignified trades.
+In the time of Henry the Eighth one of my ancestors, together with a hundred men, were taken prisoners at the siege of Calais.
+When William the Third landed in Torbay, another ancestor of mine, a yeoman possessing some small estate, undertook to distribute his proclamations. For this bit of high treason he was rewarded with a silver medal, which I well remember seeing, when I was a boy. It had descended to a very venerable and truthful old lady, an unmarried aunt, the historian of our family, on whose authority the identity of the medal I saw with that given by King William must rest.
+Another ancestor married one of two daughters, the only children of a wealthy physician, Dr. Burthogge, an intimate friend and correspondent of John Locke.
+Somewhere about 1700 a member of my family, one Richard Babbage, who appears to have been a very wild fellow, having tried his hand at various trades, and given them all up, offended a wealthy relative.
+To punish this idleness, his relative entailed all his large estates upon eleven different people, after whom he gave it to this Richard Babbage, who, had there been no entail, would have taken them as heir-at-law.
+Ten of these lives had dropped, and the eleventh was in a consumption, when Richard Babbage took it into his head to go off to America with Bamfylde Moore Carew, the King of the Beggars.
+The last only of the eleven lives existed when he embarked, and that life expired within twelve months after Richard Babbage sailed. The estates remained in possession of the representatives of the eleventh in the entail. If it could have been proved that Richard Babbage had survived twelve months after his voyage to America, these estates would have remained in my own branch of the family.
+I possess a letter from Richard Babbage, dated on board the ship in which he sailed for America.
+In the year 1773 it became necessary to sell a portion of this property, for the purpose of building a church at Ashbrenton. A private Act of Parliament was passed for that purpose, in which the rights of the true heir were reserved.</postText>
+				<dateCreated>2017-02-05 11:15:19</dateCreated>
+			</record>
+		</records>
+	</table>
+	<table name="privacysettings">
+		<columns>
+			<column name="privacySettingsId" orgname="privacySettingsId" max_length="0" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="email" orgname="email" max_length="0" length="50" charsetnr="8" flags="20489" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="MUL" referenced_table_name="users" referenced_column_name="email" />
+			<column name="privacySettingsTitle" orgname="privacySettingsTitle" max_length="0" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="privacySettingsDescription" orgname="privacySettingsDescription" max_length="0" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="status" orgname="status" max_length="0" length="1" charsetnr="63" flags="32768" type="1" decimals="0" is_nullable="YES" column_type="tinyint(1)" />
+		</columns>
+		<records>
+		</records>
+	</table>
+	<table name="rights">
+		<columns>
+			<column name="rightID" orgname="rightID" max_length="2" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="roleID" orgname="roleID" max_length="1" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="roles" referenced_column_name="roleID" />
+			<column name="rightTitle" orgname="rightTitle" max_length="30" length="100" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(100)" />
+			<column name="rightDescription" orgname="rightDescription" max_length="63" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+		</columns>
+		<records>
+			<record>
+				<rightID>1</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User</rightTitle>
+				<rightDescription>The user has the right to delete other user</rightDescription>
+			</record>
+			<record>
+				<rightID>2</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User's Photos</rightTitle>
+				<rightDescription>The user has the right to delete other user's photos</rightDescription>
+			</record>
+			<record>
+				<rightID>3</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User's Photo Collection</rightTitle>
+				<rightDescription>The user has the right to delete other user's photo collections</rightDescription>
+			</record>
+			<record>
+				<rightID>4</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User's Annotations</rightTitle>
+				<rightDescription>The user has the right to delete other user's annotations</rightDescription>
+			</record>
+			<record>
+				<rightID>5</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User's Blog Posts</rightTitle>
+				<rightDescription>The user has the right to delete other user's blog posts</rightDescription>
+			</record>
+			<record>
+				<rightID>6</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Delete User's Blog</rightTitle>
+				<rightDescription>The user has the right to delete other user's blog</rightDescription>
+			</record>
+			<record>
+				<rightID>7</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Profile Details</rightTitle>
+				<rightDescription>The user has the right to edit other user's profile details</rightDescription>
+			</record>
+			<record>
+				<rightID>8</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Photo</rightTitle>
+				<rightDescription>The user has the right to edit other user's photo</rightDescription>
+			</record>
+			<record>
+				<rightID>9</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Photo Collection</rightTitle>
+				<rightDescription>The user has the right to edit other user's photo collection</rightDescription>
+			</record>
+			<record>
+				<rightID>10</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Annotations</rightTitle>
+				<rightDescription>The user has the right to edit other user's annotations</rightDescription>
+			</record>
+			<record>
+				<rightID>11</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Blog Posts</rightTitle>
+				<rightDescription>The user has the right to edit other user's blog posts</rightDescription>
+			</record>
+			<record>
+				<rightID>12</rightID>
+				<roleID>1</roleID>
+				<rightTitle>Edit User's Blog</rightTitle>
+				<rightDescription>The user has the right to edit other user's blog</rightDescription>
+			</record>
+		</records>
+	</table>
+	<table name="roles">
+		<columns>
+			<column name="roleID" orgname="roleID" max_length="1" length="11" charsetnr="63" flags="49667" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" extra="auto_increment" />
+			<column name="roleTitle" orgname="roleTitle" max_length="13" length="50" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(50)" />
+		</columns>
+		<records>
+			<record>
+				<roleID>1</roleID>
+				<roleTitle>administrator</roleTitle>
+			</record>
+			<record>
+				<roleID>2</roleID>
+				<roleTitle>user</roleTitle>
+			</record>
+		</records>
+	</table>
+	<table name="usercirclerelationships">
+		<columns>
+			<column name="email" orgname="email" max_length="17" length="50" charsetnr="8" flags="20483" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="PRI" referenced_table_name="users" referenced_column_name="email" />
+			<column name="circleFriendsId" orgname="circleFriendsId" max_length="1" length="11" charsetnr="63" flags="53259" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="PRI" referenced_table_name="circleoffriends" referenced_column_name="circleFriendsId" />
+		</columns>
+		<records>
+			<record>
+				<email>ada@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>alan@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>charles@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>larry@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>tim@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>vicky@ucl.ac.uk</email>
+				<circleFriendsId>1</circleFriendsId>
+			</record>
+			<record>
+				<email>ada@ucl.ac.uk</email>
+				<circleFriendsId>2</circleFriendsId>
+			</record>
+			<record>
+				<email>charles@ucl.ac.uk</email>
+				<circleFriendsId>2</circleFriendsId>
+			</record>
+			<record>
+				<email>ada@ucl.ac.uk</email>
+				<circleFriendsId>3</circleFriendsId>
+			</record>
+			<record>
+				<email>charles@ucl.ac.uk</email>
+				<circleFriendsId>3</circleFriendsId>
+			</record>
+			<record>
+				<email>vicky@ucl.ac.uk</email>
+				<circleFriendsId>3</circleFriendsId>
+			</record>
+			<record>
+				<email>charles@ucl.ac.uk</email>
+				<circleFriendsId>4</circleFriendsId>
+			</record>
+		</records>
+	</table>
+	<table name="users">
+		<columns>
+			<column name="email" orgname="email" max_length="17" length="50" charsetnr="8" flags="20483" type="253" decimals="0" is_nullable="NO" column_type="varchar(50)" column_key="PRI" />
+			<column name="roleID" orgname="roleID" max_length="1" length="11" charsetnr="63" flags="53257" type="3" decimals="0" is_nullable="NO" column_type="int(11)" column_key="MUL" referenced_table_name="roles" referenced_column_name="roleID" />
+			<column name="user_password" orgname="user_password" max_length="4" length="20" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(20)" />
+			<column name="firstName" orgname="firstName" max_length="7" length="15" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(15)" />
+			<column name="lastName" orgname="lastName" max_length="11" length="15" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(15)" />
+			<column name="profileImage" orgname="profileImage" max_length="37" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+			<column name="profileDescription" orgname="profileDescription" max_length="0" length="255" charsetnr="8" flags="0" type="253" decimals="0" is_nullable="YES" column_type="varchar(255)" />
+		</columns>
+		<records>
+			<record>
+				<email>ada@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Ada</firstName>
+				<lastName>Lovelace</lastName>
+				<profileImage>/images/profile/ada@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>alan@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Alan</firstName>
+				<lastName>Turing</lastName>
+				<profileImage>/images/profile/alan@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>charles@ucl.ac.uk</email>
+				<roleID>1</roleID>
+				<user_password>test</user_password>
+				<firstName>Charles</firstName>
+				<lastName>Babbage</lastName>
+				<profileImage>/images/profile/charles@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>dennis@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Dennis</firstName>
+				<lastName>Ritchie</lastName>
+				<profileImage>/images/profile/dennis@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>grace@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Grace</firstName>
+				<lastName>Hopper</lastName>
+				<profileImage>/images/profile/grace@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>john@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>John</firstName>
+				<lastName>von Neumann</lastName>
+				<profileImage>/images/profile/john@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>ken@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Ken</firstName>
+				<lastName>Thompson</lastName>
+				<profileImage>/images/profile/ken@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>larry@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Larry</firstName>
+				<lastName>Page</lastName>
+				<profileImage>/images/profile/larry@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>tim@ucl.ac.uk</email>
+				<roleID>2</roleID>
+				<user_password>test</user_password>
+				<firstName>Tim</firstName>
+				<lastName>Berners-Lee</lastName>
+				<profileImage>/images/profile/tim@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+			<record>
+				<email>vicky@ucl.ac.uk</email>
+				<roleID>1</roleID>
+				<user_password>test</user_password>
+				<firstName>Vicky</firstName>
+				<lastName>LovesPHP</lastName>
+				<profileImage>/images/profile/vicky@ucl.ac.uk.jpg</profileImage>
+				<profileDescription></profileDescription>
+			</record>
+		</records>
+	</table>
+</database>
