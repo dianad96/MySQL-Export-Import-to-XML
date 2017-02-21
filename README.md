@@ -101,7 +101,7 @@ For the database we're using in this project, we have the following column const
 | comments               | photos/users |
 | friendships            |  |
 | messages               |  |
-| photoCollection        |  |
+| photoCollection        | users |
 | photos                 | photoCollection |
 | posts                  | blogs |
 | privacySettings        | users |
