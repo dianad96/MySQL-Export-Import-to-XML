@@ -97,11 +97,11 @@ For the database we're using in this project, we have the following column const
 | accessRights           | photoCollection/users/circleOfFriends |
 | annotations            | photos/users |
 | blogs                  | users |
-| circlOfFriends         |  |
+| circleOfFriends         |  |
 | comments               | photos/users |
 | friendships            |  |
 | messages               |  |
-| photoCollection        | users |
+| photoCollection        |  |
 | photos                 | photoCollection |
 | posts                  | blogs |
 | privacySettings        | users |
